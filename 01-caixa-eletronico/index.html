@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Eletrônico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <form onsubmit="event.preventDefault(); processarDados();">
+            <h2>Caixa Eletrônico</h2>
+            <label for="idsaque">Valor do saque (R$)</label>
+            <input type="number" name="saque" id="idsaque" min="5"  max="500" step="5" required>
+            <p>*Notas disponíveis: 100, 50, 20, 10 e 5</p>
+            <button type="submit">Sacar</button>
+        </form>
+        <section class="resultado">
+            <div class="msg">
+                <h2></h2>
+                <p>O caixa eletronico vai te entregar as seguintes notas</p>
+            </div>
+            <div class="cedulas-container">
+                <div class="cedulas-valores">
+                    <div class="cedula-valor">R$100</div>
+                    <div class="cedula-valor">R$50</div>
+                    <div class="cedula-valor">R$20</div>
+                    <div class="cedula-valor">R$10</div>
+                    <div class="cedula-valor">R$5</div>
+                </div>
+                <div class="cedulas-quantidade">
+                    <div data-index="n100" class="cedula-quantidade"></div>
+                    <div data-index="n50" class="cedula-quantidade"></div>
+                    <div data-index="n20" class="cedula-quantidade"></div>
+                    <div data-index="n10" class="cedula-quantidade"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por <i>Renan®</i></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
