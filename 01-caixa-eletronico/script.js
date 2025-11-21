@@ -1,4 +1,4 @@
-alert('Este site é uma simulação de Caixa Eletrônico e está em fase de testes.')
+alert('Atenção! Este site é apenas uma simulação de Caixa Eletrônico. Estamos em fase de testes 🚀');
 
 function calcularSaque() {
      let saque = Number(document.querySelector('#idsaque').value)
